@@ -1,4 +1,4 @@
-Clone repo and start program by running master.py.
+Clone repo and start program by running master.py. Info on how the program works can be found in thesis.pdf.
 
 Required libraries to be installed seperately:
 - PyQt5: pip3 install pyqt5
