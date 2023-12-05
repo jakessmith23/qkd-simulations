@@ -151,7 +151,7 @@ class Main():
         self.timer.start(100)
     
     def single_simulation_progress_check_callback(self):
-        self._ui.progressBar.setValue(self._system.progress)
+        self._ui.progressBar.setValue(round(self._system.progress))
         if self._system.progress == 100:
             results = self._system.results
 
@@ -225,7 +225,7 @@ class Main():
         self._ui.multiPlot.setPixmap(self.msd.pixmap)
         self._ui.multiPlot.repaint()
 
-        self._ui.multiProgressBar.setValue(round(100*len(self.msd.used_x_param_values)/len(self.msd.x_param_values), 2))
+        self._ui.multiProgressBar.setValue(round(100*len(self.msd.used_x_param_values)/len(self.msd.x_param_values)))
 
         if len(self.msd.used_x_param_values) == len(self.msd.x_param_values):
             if self.msd.x_param_start == self.msd.x_param_end:
