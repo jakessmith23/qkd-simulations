@@ -194,7 +194,9 @@ class Main():
             self.msd.results.append(result)
 
             if self.msd.y_param_name == "QBER":
-                self.msd.y_param_values.append(result[self.msd.y_param_name]*100)
+                if result[self.msd.y_param_name] is None:
+                    result[self.msd.y_param_name] = 0
+                self.msd.y_param_values.append(result[self.msd.y_param_name] * 100)
             else:
                 self.msd.y_param_values.append(result[self.msd.y_param_name])
             
